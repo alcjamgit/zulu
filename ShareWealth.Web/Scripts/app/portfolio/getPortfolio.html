@@ -1,0 +1,38 @@
+﻿<div class="card">
+    <div class="card-header ch-alt">
+        <h2>Sample Form <small>Pellentesque ac lectus sed elit dictum vehicula</small></h2>
+    </div>
+
+    <div class="card-body card-padding">
+        <div class="form-group fg-float">
+            <div class="fg-line">
+                <input type="text" class="form-control" ng-model="vm.portfolio.portfolioName">
+            </div>
+            <label class="fg-label">PortfolioName</label>
+        </div>
+
+        <div class="form-group fg-float">
+            <div class="fg-line">
+                <input type="email" class="form-control">
+            </div>
+            <label class="fg-label">Email address</label>
+        </div>
+
+        <div class="form-group fg-float">
+            <div class="fg-line">
+                <input type="email" class="form-control">
+            </div>
+            <label class="fg-label">Contact Number</label>
+        </div>
+
+        <div class="form-group fg-float">
+            <div class="fg-line">
+                <textarea class="form-control auto-size" data-autosize-on="true" style="overflow: hidden; word-wrap: break-word; height: 43px;"></textarea>
+            </div>
+            <label class="fg-label">Message</label>
+        </div>
+
+        <button class="btn btn-info waves-effect" ng-click ="vm.submit()">Submit</button>
+        <button class="btn btn-link waves-effect">Cancel</button>
+    </div>
+</div>

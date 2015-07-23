@@ -13,7 +13,7 @@
     <link href="~/Content/vendors/bower_components/sweetalert/dist/sweetalert-override.min.css" rel="stylesheet">
     <link href="~/Content/vendors/bower_components/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
     <link href="~/Content/vendors/socicon/socicon.min.css" rel="stylesheet">
-    @*<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />*@
+
 
     <!-- Kendo UI CSS -->
     <link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.common-material.min.css")" rel="stylesheet" type="text/css" />
@@ -31,24 +31,25 @@
     <link href="~/Content/css/app.min.css" rel="stylesheet" />
 
 
-
 </head>
-<body>
+<body ng-app="app">
     @Html.Partial("_Header")
-    
+
     <section id="main">
         @Html.Partial("_SideBar")
         @Html.Partial("_SecurityExplorer")
         <section id="content">
             <div class="container">
                 @RenderBody()
+                <ng-view>
+
+                </ng-view>
             </div>
         </section>
     </section>
 
     @Html.Partial("_Footer")
     @Html.Partial("_OlderBrowser")
-
 
     <!-- Javascript Libraries -->
 
@@ -67,6 +68,24 @@
     <script src="~/Content/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
     <script src="~/Content/vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- Angular Stuff -->
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+
+    <script src="~/Scripts/app/main.js"></script>
+    <script src="~/Scripts/app/sideBar/SidebarController.js"></script>
+    <script src="~/Scripts/app/dashBoard/dashBoardService.js"></script>
+    <script src="~/Scripts/app/dashBoard/dashBoardController.js"></script>
+    <script src="~/Scripts/app/portfolio/portfolioService.js"></script>
+    <script src="~/Scripts/app/portfolio/getPortfolioController.js"></script>
+    <script src="~/Scripts/app/scans/scanService.js"></script>
+    <script src="~/Scripts/app/scans/scansController.js"></script>
+    <script src="~/Scripts/app/securities/securitiesService.js"></script>
+    <script src="~/Scripts/app/securities/securitiesController.js"></script>
+    <script src="~/Scripts/app/watchlist/watchlistService.js"></script>
+    <script src="~/Scripts/app/watchlist/watchlistController.js"></script>
+
+
     <!-- Placeholder for IE9 -->
     <!--[if IE 9 ]>
         <script src="~/Content/vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
@@ -81,5 +100,5 @@
     <script src="~/Content/js/demo.js"></script>
 
 
-    </body>
+</body>
 </html>

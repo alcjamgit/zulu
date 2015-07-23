@@ -1,4 +1,4 @@
-﻿<aside id="sidebar">
+﻿<aside id="sidebar" ng-controller ="SidebarController as vm">
     <div class="sidebar-inner c-overflow">
         <div class="profile-menu">
             <a href="">
@@ -30,31 +30,17 @@
         </div>
 
         <ul class="main-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+            <li class="active"><a href="/#/dashboard"><i class="fa fa-tachometer"></i> Dashboard</a></li>
             <li class="sub-menu">
                 <a href=""><i class="fa fa-briefcase"></i> Portfolio</a>
                 <ul>
-                    <li><a href="widget-templates.html">Active</a></li>
-                    <li><a class="active" href="widgets.html">All Portfolios</a></li>
+                    <li><a href="/#/portfolio/getPortfolio">Active</a></li>
+                    <li><a href="/#/portfolio/getAllPortfolios">All Portfolios</a></li>
                 </ul>
             </li>
-            <li class="sub-menu">
-                <a href=""><i class="fa fa-binoculars"></i> Watchlists</a>
-
-                <ul>
-                    <li><a href="tables.html">Your Watchlist</a></li>
-                    <li><a href="data-tables.html">Industry Watchlist</a></li>
-                </ul>
-            </li>
-            <li><a href="index.html"><i class="fa fa-money"></i> Securities</a></li>
-            <li class="sub-menu">
-                <a href=""><i class="fa fa-search"></i> Scans</a>
-
-                <ul>
-                    <li><a href="form-elements.html">Scan Profiles</a></li>
-                    <li><a href="form-components.html">Daily Scans</a></li>
-                </ul>
-            </li>
+            <li><a href="/#/watchlist"><i class="fa fa-binoculars"></i> Watchlists</a></li>
+            <li><a href="/#/securities"><i class="fa fa-money"></i> Securities</a></li>
+            <li><a href="/#/scans"><i class="fa fa-search"></i> Scans</a></li>
         </ul>
     </div>
 </aside>
