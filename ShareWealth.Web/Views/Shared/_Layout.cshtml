@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="app" ng-controller="PageController">
 <!--[if IE 9 ]><html class="ie9"><![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Admin</title>
+    <base href="/">
+    <title ng-bind= "'Beyond Charts - ' + Page.title()"></title>
 
     <!-- Vendor CSS -->
     <link href="~/Content/vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
@@ -16,7 +17,7 @@
 
 
     <!-- Kendo UI CSS -->
-    <link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.common-material.min.css")" rel="stylesheet" type="text/css" />
+    @*<link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.common-material.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/kendo/2015.2.624/kendo.material.min.css")" rel="stylesheet" type="text/css" />
@@ -25,14 +26,14 @@
     <script src="@Url.Content("~/Scripts/kendo/2015.2.624/jszip.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo/2015.2.624/kendo.all.min.js")"></script>
     <script src="@Url.Content("~/Scripts/kendo/2015.2.624/kendo.aspnetmvc.min.js")"></script>
-    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    <script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>*@
 
     <!-- CSS -->
     <link href="~/Content/css/app.min.css" rel="stylesheet" />
 
 
 </head>
-<body ng-app="app">
+<body>
     @Html.Partial("_Header")
 
     <section id="main">
@@ -41,9 +42,7 @@
         <section id="content">
             <div class="container">
                 @RenderBody()
-                <ng-view>
-
-                </ng-view>
+                <div ng-view></div>
             </div>
         </section>
     </section>
@@ -52,7 +51,7 @@
     @Html.Partial("_OlderBrowser")
 
     <!-- Javascript Libraries -->
-
+    <script src="~/Content/vendors/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="~/Content/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="~/Content/vendors/bower_components/flot/jquery.flot.js"></script>
     <script src="~/Content/vendors/bower_components/flot/jquery.flot.resize.js"></script>
@@ -68,16 +67,38 @@
     <script src="~/Content/vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
     <script src="~/Content/vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- Charting Stuff -->
+    <script src="~/Content/js/flot-charts/curved-line-chart.js"></script>
+    <script src="~/Content/js/flot-charts/line-chart.js"></script>
+    <script src="~/Content/js/charts.js"></script>
+
+    <!-- Placeholder for IE9 -->
+    <!--[if IE 9 ]>
+        <script src="~/Content/vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+    <![endif]-->
+
+    @*<script src="~/Content/js/charts.js"></script>*@
+    <script src="~/Content/js/functions.js"></script>
+    <script src="~/Content/js/demo.js"></script>
+
+
     <!-- Angular Stuff -->
     <script src="~/Scripts/angular.min.js"></script>
     <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-animate.min.js"></script>
 
     <script src="~/Scripts/app/main.js"></script>
+    <script src="~/Scripts/app/pageHeader/pageHeaderService.js"></script>
+    <script src="~/Scripts/app/pageHeader/pageController.js"></script>
     <script src="~/Scripts/app/sideBar/SidebarController.js"></script>
+
     <script src="~/Scripts/app/dashBoard/dashBoardService.js"></script>
     <script src="~/Scripts/app/dashBoard/dashBoardController.js"></script>
+    <script src="~/Scripts/app/dashboard/dashboardDirective.js"></script>
+
     <script src="~/Scripts/app/portfolio/portfolioService.js"></script>
     <script src="~/Scripts/app/portfolio/getPortfolioController.js"></script>
+    <script src="~/Scripts/app/portfolio/getAllPortfoliosController.js"></script>
     <script src="~/Scripts/app/scans/scanService.js"></script>
     <script src="~/Scripts/app/scans/scansController.js"></script>
     <script src="~/Scripts/app/securities/securitiesService.js"></script>
@@ -86,18 +107,8 @@
     <script src="~/Scripts/app/watchlist/watchlistController.js"></script>
 
 
-    <!-- Placeholder for IE9 -->
-    <!--[if IE 9 ]>
-        <script src="~/Content/vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
-    <![endif]-->
 
-    <script src="~/Content/js/flot-charts/curved-line-chart.js"></script>
-    <script src="~/Content/js/flot-charts/line-chart.js"></script>
-    <script src="~/Content/js/charts.js"></script>
 
-    <script src="~/Content/js/charts.js"></script>
-    <script src="~/Content/js/functions.js"></script>
-    <script src="~/Content/js/demo.js"></script>
 
 
 </body>

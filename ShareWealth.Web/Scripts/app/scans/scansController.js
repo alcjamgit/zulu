@@ -4,10 +4,10 @@
         .module('app')
         .controller('ScansController', ScansController);
 
-    ScansController.$inject = ['$scope', 'ScanService'];
+    ScansController.$inject = ['$scope', 'ScanService', 'PageHeaderService'];
 
-    function ScansController($scope, ScanService) {
-
+    function ScansController($scope, ScanService, PageHeaderService) {
+        PageHeaderService.setTitle('Scan Profiles');
     }
 
 })();

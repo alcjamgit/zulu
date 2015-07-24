@@ -4,9 +4,10 @@
         .module('app')
         .controller('DashboardController', DashboardController);
 
-    DashboardController.$inject = ['$scope', 'DashboardService'];
+    DashboardController.$inject = ['$scope', 'DashboardService', 'PageHeaderService'];
 
-    function DashboardController($scope, DashboardService) {
+    function DashboardController($scope, DashboardService, PageHeaderService) {
+        PageHeaderService.setTitle('Dashboard');
         var vm = this;
     }
 

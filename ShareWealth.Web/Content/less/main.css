@@ -14805,7 +14805,7 @@ body.login-content:before {
 }
 @media screen and (min-width: 768px) {
   .block-header {
-    padding: 0 22px;
+    padding: 0 0;
   }
 }
 @media screen and (max-width: 991px) {
@@ -15080,6 +15080,31 @@ body.login-content:before {
 }
 body.sw-toggled #footer {
   padding-left: 268px;
+}
+.fade {
+  /*position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;*/
+  opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.fade.ng-enter {
+  opacity: 0;
+}
+.fade.ng-enter-active {
+  opacity: 1;
+}
+.fade.ng-leave {
+  opacity: 1;
+}
+.fade.ng-leave-active {
+  opacity: 0;
 }
 /*
  * Vendor Overrides

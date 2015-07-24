@@ -681,6 +681,12 @@
     <Content Include="Content\kendo\2015.2.624\Uniform\sprite_2x.png" />
     <Content Include="Content\kendo\2015.2.624\Uniform\sprite_kpi.png" />
     <Content Include="Content\kendo\2015.2.624\Uniform\sprite_kpi_2x.png" />
+    <Content Include="Content\less\inc\angularAnimate.css">
+      <DependentUpon>angularAnimate.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\inc\angularAnimate.min.css">
+      <DependentUpon>angularAnimate.css</DependentUpon>
+    </Content>
     <Content Include="Content\less\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
@@ -2998,9 +3004,6 @@
     <Content Include="Content\img\icons\ellipsis%402x.png.crdownload" />
     <Content Include="Content\img\social\googleplus-128.png.crdownload" />
     <Content Include="Content\media\mediaelement.srt" />
-    <Content Include="Content\css\app.css.map">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
     <Content Include="Content\kendo\2015.2.624\fonts\DejaVu\DejaVuSans-Bold.ttf" />
     <Content Include="Content\kendo\2015.2.624\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
     <Content Include="Content\kendo\2015.2.624\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
@@ -3084,8 +3087,11 @@
     <Content Include="Scripts\app\dashboard\dashboard.html" />
     <Content Include="Scripts\app\dashboard\dashboardController.js" />
     <Content Include="Scripts\app\dashboard\dashboardService.js" />
+    <Content Include="Scripts\app\dashboard\dashboardDirective.js" />
     <Content Include="Scripts\app\index.html" />
     <Content Include="Scripts\app\main.js" />
+    <Content Include="Scripts\app\pageHeader\pageController.js" />
+    <Content Include="Scripts\app\pageHeader\pageHeaderService.js" />
     <Content Include="Scripts\app\portfolio\getAllPortfolios.html" />
     <Content Include="Scripts\app\portfolio\getPortfolio.html" />
     <Content Include="Scripts\app\portfolio\getAllPortfoliosController.js" />
@@ -3114,6 +3120,13 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Content\less\inc\angularAnimate.less" />
+    <Content Include="Content\less\inc\angularAnimate.css.map">
+      <DependentUpon>angularAnimate.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\app.css.map">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />

@@ -2,7 +2,7 @@ $(document).ready(function(){
     
     /* Make some random data*/
     
-    var data = [];
+  var data = [];
     var totalPoints = 300;
     var updateInterval = 30;
     
