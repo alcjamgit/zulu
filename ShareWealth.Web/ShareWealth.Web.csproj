@@ -39,10 +39,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kendo.Mvc">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Telerik\UI for ASP.NET MVC Q2 2015\wrappers\aspnetmvc\Binaries\Mvc5\Kendo.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
